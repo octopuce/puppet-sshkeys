@@ -13,6 +13,7 @@ define sshkeys::key (
     $key      = undef,
     $type     = undef,
     $user     = undef,
+    $options  = undef,
   ) {
 
   if ( !$user or !$key_name ) {
@@ -39,5 +40,6 @@ define sshkeys::key (
     user   => $user,
     key    => $fin_key,
     type   => $fin_type,
+    options => $options,
   }
 }
